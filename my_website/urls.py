@@ -1,3 +1,4 @@
+from blog.views import BlogListView
 """
 URL configuration for my_website project.
 
@@ -19,4 +20,5 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('blogs/', BlogListView.as_view(), name='blog-list'),
 ]
